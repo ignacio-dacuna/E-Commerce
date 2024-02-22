@@ -4,37 +4,36 @@ import { useEffect, useState } from 'react'
 import colors from '../utils/globals/colors'
 import Header from '../components/Header'
 
-const ProductDetail = ({productId,portrait}) => {
+const ProductDetail = ({route}) => {
+  const {productId} = route.params
+  const [product,setProduct] = useState({})
 
-const [product,setProduct] = useState({})
-
-useEffect(()=>{
+  useEffect(()=>{
     const productFinded = products.find(product => product.id === productId)
     setProduct(productFinded)
-},[productId])
+  },[productId])
 
-return (
-<View style={styles.container}>
-    <Header title="Detalle del producto"/>
-    <View style={[styles.content,!portrait && {flexDirection:"row",gap:10,padding:20}] } >
+  return (
+    <View style={styles.container}>
+    <View style={styles.content} >
         <Image
-            style={[styles.image,!portrait && {width:"40%",height:200}]}
-            source={{uri:product?.images ? product.images[0] : null}}
-            resizeMode='cover'
+          style={styles.image}
+          source={{uri:product?.images ? product.images[0] : null}}
+          resizeMode='cover'
         />
-        <View style={[styles.containerText,!portrait && {width:"30%"}]}>
-            <Text style={styles.title}>{product.title}</Text>
-            <Text>{product.description}</Text>
+        <View style={styles.containerText}>
+          <Text style={styles.title}>{product.title}</Text>
+          <Text>{product.description}</Text>
         </View>
-        <View style={[styles.containerPrice ,!portrait && {width:"20%",flexDirection:"column"}]}>
-            <Text style={styles.price}>$ {product.price}</Text>
-            <Pressable style={styles.buyNow}>
-                <Text style={styles.buyNowText}>Buy Now</Text>
-            </Pressable>
+        <View style={styles.containerPrice }>
+          <Text style={styles.price}>$ {product.price}</Text>
+          <Pressable style={styles.buyNow}>
+            <Text style={styles.buyNowText}>Buy Now</Text>
+          </Pressable>
         </View>
+      </View>
     </View>
-</View>
-)
+  )
 }
 
 export default ProductDetail

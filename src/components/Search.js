@@ -27,7 +27,7 @@ const Search = ({handlerKeyword}) => {
 
     }
 
-return (
+  return (
     <View>
         <View style={styles.container}>
         <TextInput
@@ -45,7 +45,7 @@ return (
         </View>
         {error ? <Text style={styles.errorText}>{error}</Text> : null}
     </View>
-)
+  )
 }
 
 export default Search

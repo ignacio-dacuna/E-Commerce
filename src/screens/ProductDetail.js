@@ -39,47 +39,47 @@ const ProductDetail = ({route}) => {
 export default ProductDetail
 
 const styles = StyleSheet.create({
-container:{
+  container:{
     width:"100%",
     flex:1,
     justifyContent:"start",
     alignItems:"center"
-},
-content:{
+  },
+  content:{
     width:"100%"
-},
+  },
 
-image:{
+  image:{
     width:"100%",
     height:300
-},
-containerText:{
+  },
+  containerText:{
     gap:25,
     paddingHorizontal:5,
     paddingVertical:25
-},
+  },
 
-containerPrice:{
-    width:"100%",
-    flexDirection:"row",
-    justifyContent:"space-around",
-    alignItems:"center",
-    marginVertical:10
-},
-title:{
+  containerPrice:{
+      width:"100%",
+      flexDirection:"row",
+      justifyContent:"space-around",
+      alignItems:"center",
+      marginVertical:10
+  },
+  title:{
     fontSize:20,
     fontWeight:"bold"
-},
-price:{
+  },
+  price:{
     fontSize:30
-},
-buyNow:{
+  },
+  buyNow:{
     backgroundColor:colors.red1,
     paddingVertical:5,
     paddingHorizontal:10,
     borderRadius:5
-},
-buyNowText:{
+  },
+  buyNowText:{
     color:"white"
-}
+  }
 })

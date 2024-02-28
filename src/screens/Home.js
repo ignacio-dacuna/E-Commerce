@@ -1,5 +1,4 @@
-import { StyleSheet, Text, View,FlatList } from 'react-native'
-import Header from '../components/Header'
+import { StyleSheet} from 'react-native'
 import Categories from '../components/Categories'
 
 const Home = ({navigation}) => {

@@ -7,7 +7,7 @@ import { deleteCartItem } from '../features/cart/cartSlice'
 
 const CartItem = ({item}) => {
     const dispatch = useDispatch()
-return (
+  return (
         <View style={styles.card}>
             <View style={styles.textContainer}>
                 <Text style={styles.text}>{item.title}</Text>
@@ -20,33 +20,33 @@ return (
             </Pressable>
             
         </View>
-    )
+  )
 }
 
 export default CartItem
 
 const styles = StyleSheet.create({
     card:{
-        backgroundColor:colors.red2,
+        backgroundColor:colors.red3,
         padding:20,
         margin:10,
         borderWidth:2,
         borderRadius:10,
         flexDirection:"row",
         justifyContent:"space-between",
-        height:100,
+        height:140,
         alignItems:"center"
     },
     textContainer:{
         width:"70%"
     },
     text:{
-        color:"#FFFFFF",
+        color:colors.lightGray,
         fontSize:19,
         fontFamily:fonts.JosefinSansBold
     },
     text2:{
-        color:"#FFFFFF",
+        color:colors.lightGray,
         fontSize:14,
         fontFamily:fonts.JosefinSansBold
     }

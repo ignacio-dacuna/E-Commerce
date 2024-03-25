@@ -9,7 +9,7 @@ const Header = ({title="Ecommerce",navigation}) => {
                 <Pressable style={styles.goBack} onPress={()=>navigation.goBack()}>
                     <AntDesign name="arrowleft" size={25} color="black"/>
                 </Pressable>}
-                <Text style={styles.text}>{title}</Text>
+                <Text style={styles.text}>Dacu-Tienda</Text>
             </View>
 }
 
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         position:"relative"
     },
     text:{
-        fontSize:30
+        fontSize:30,
     },
     goBack:{
         position:"absolute",

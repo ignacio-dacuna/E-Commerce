@@ -65,7 +65,7 @@ const Login = ({navigation}) => {
                 <SubmitButton onPress={onSubmit} title="Iniciar Sesion"/>
                 <Text style={styles.sub}>No tenes una cuenta?</Text>
                 <Pressable onPress={()=> navigation.navigate("Register")} >
-                    <Text style={styles.subLink}>Registro</Text>
+                    <Text style={styles.subLink}>Registrate</Text>
                 </Pressable>
             </View>
         </View>
@@ -100,6 +100,10 @@ const styles = StyleSheet.create({
     subLink:{
       fontSize:14,
       fontFamily:fonts.JosefinSansBold,
-      color:"blue"
+      color:"white",
+      backgroundColor:"black",
+      borderRadius: 5,
+      padding: 5,
+      paddingHorizontal: 15
     }
 })

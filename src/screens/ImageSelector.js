@@ -56,7 +56,7 @@ return (
             <AddButton title="Tomar foto" onPress={pickImage} />
         </View>
         <View style={styles.color}>
-            <AddButton title="Confirm photo" onPress={confirmImage} />
+            <AddButton title="Confirmar foto" onPress={confirmImage} />
         </View>
     </View>
 )
